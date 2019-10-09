@@ -1,2 +1,3 @@
 # Cuda_2019_12
-Cuda laboratory and projetc
+This repository contains files use during CUDA computer laboratories.
+There are source code and reports for each laboratory classes.
