@@ -1,0 +1,17 @@
+==22606== NVPROF is profiling process 22606, command: ./vectorAdd
+Failed to allocate device vector B (error code out of memory)!
+[Vector addition of 1000000000 elements]
+==22606== Profiling application: ./vectorAdd
+==22606== Profiling result:
+No kernels were profiled.
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+      API calls:   99.57%  302.56ms         2  151.28ms  585.62us  301.97ms  cudaMalloc
+                    0.23%  685.98us        96  7.1450us     838ns  273.57us  cuDeviceGetAttribute
+                    0.17%  523.95us         1  523.95us  523.95us  523.95us  cuDeviceTotalMem
+                    0.03%  78.571us         1  78.571us  78.571us  78.571us  cuDeviceGetName
+                    0.00%  9.9870us         1  9.9870us  9.9870us  9.9870us  cuDeviceGetPCIBusId
+                    0.00%  3.8420us         3  1.2800us     908ns  1.9560us  cuDeviceGetCount
+                    0.00%  2.6540us         2  1.3270us     908ns  1.7460us  cuDeviceGet
+                    0.00%  1.1870us         1  1.1870us  1.1870us  1.1870us  cuDeviceGetUuid
+                    0.00%     839ns         1     839ns     839ns     839ns  cudaGetErrorString
+======== Error: Application returned non-zero code 1
