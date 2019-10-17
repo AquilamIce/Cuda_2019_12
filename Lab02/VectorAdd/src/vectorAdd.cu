@@ -106,9 +106,9 @@ main(void)
     printf("Test PASSED\n");
 
     // Free memory
-    free(A);
-    free(B);
-    free(C);
+    cudaFree(A);
+    cudaFree(B);
+    cudaFree(C);
 
     printf("Done\n");
     return 0;
