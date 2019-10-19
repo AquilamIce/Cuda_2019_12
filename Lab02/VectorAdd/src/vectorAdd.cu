@@ -46,13 +46,16 @@ vectorAdd(const float *A, const float *B, float *C, int numElements)
 int
 main(void)
 {
+
+	int deviceCount = 0;
+
     // Error code to check return values for CUDA calls
     cudaError_t err = cudaSuccess;
 
     // Print the vector length to be used, and compute its size
     unsigned long numElements = 2<<29;
     size_t size = numElements * sizeof(float);
-    //printf("%f\n", (float)numElements*size);
+    printf("%f\n", size);
     printf("[Vector addition of %d elements]\n", numElements);
 
     // Allocate the vector A
