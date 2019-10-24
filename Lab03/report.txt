@@ -1,0 +1,2 @@
+-> nvvp output analysis GPU|CPU|GPU+CPU|CPU+GPU page faults
+-> memory menagement analysis with nvvp
