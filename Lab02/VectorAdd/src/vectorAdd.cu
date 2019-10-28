@@ -48,27 +48,33 @@ main(void)
 {
 
 	int deviceCount = 0;
-
+	//Check available memory
+	cudaDeviceProp deviceProp;
+	cudaGetDeviceProperties(&deviceProp, 0);
     // Error code to check return values for CUDA calls
     cudaError_t err = cudaSuccess;
 
     // Print the vector length to be used, and compute its size
-    unsigned long numElements = 2<<29;
-    size_t size = numElements * sizeof(float);
-    printf("%f\n", size);
-    printf("[Vector addition of %d elements]\n", numElements);
+    unsigned long long numElements = 1<<20;
+    unsigned long long size = numElements * sizeof(float);
+    if(deviceProp.totalGlobalMem < size)
+    {
+    	fprintf(stderr, "Data size too large\n");
+        exit(EXIT_FAILURE);
+    }
+    printf("[Vector addition of %llu elements]\n", numElements);
 
     // Allocate the vector A
     float *A;
-    cudaMallocManaged(&A, size);
+    checkCudaErrors(cudaMallocManaged(&A, size));
 
     // Allocate the vector B
     float *B;
-    cudaMallocManaged(&B, size);
+    checkCudaErrors(cudaMallocManaged(&B, size));
 
     // Allocate the vector C
     float *C;
-    cudaMallocManaged(&C, size);
+    checkCudaErrors(cudaMallocManaged(&C, size));
 
     // Verify that allocations succeeded
     if (A == NULL || B == NULL || C == NULL)
@@ -98,11 +104,11 @@ main(void)
     }
 
     // Verify that the result vector is correct
-    for (int i = 0; i < numElements; ++i)
+    for (int i = 0; i < 100; ++i)
     {
         if (fabs(A[i] + B[i] - C[i]) > 1e-5)
         {
-            fprintf(stderr, "Result verification failed at element %d!\n", i);
+            fprintf(stderr, "Result verification failed at element %d!\t%f|%f\n", i, A[i] + B[i], C[i]);
             exit(EXIT_FAILURE);
         }
     }

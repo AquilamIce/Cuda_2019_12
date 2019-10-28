@@ -50,7 +50,7 @@ main(void)
     cudaError_t err = cudaSuccess;
 
     // Print the vector length to be used, and compute its size
-    int numElements = 100000000;
+    int numElements = 1<<20;
     size_t size = numElements * sizeof(float);
     printf("[Vector addition of %d elements]\n", numElements);
 
