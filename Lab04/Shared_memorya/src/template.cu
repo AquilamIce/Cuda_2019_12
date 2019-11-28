@@ -104,7 +104,7 @@ int main(int argc, char **argv)
 	cudaMallocManaged(&A.elements, SIZE * SIZE * sizeof(matrixType));
 	cudaMallocManaged(&B.elements, SIZE * SIZE * sizeof(matrixType));
 	cudaMallocManaged(&C.elements, SIZE * SIZE * sizeof(matrixType));
-    C2.elements = (matrixType*)calloc(SIZE, sizeof(matrixType));
+    C2.elements = (matrixType*)calloc(SIZE * SIZE, sizeof(matrixType));
 
     // Verify that allocations succeeded
     if (A.elements == NULL || B.elements == NULL || C.elements == NULL || C2.elements == NULL)
@@ -124,7 +124,7 @@ int main(int argc, char **argv)
 	dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
     dim3 dimGrid(SIZE / dimBlock.x, SIZE / dimBlock.y);
     MatrixMul<<<dimGrid, dimBlock>>>(A, B, C);
-
+    cudaDeviceSynchronize();
     if (err != cudaSuccess)
     {
         fprintf(stderr, "Failed to launch vectorAdd kernel (error code %s)!\n", cudaGetErrorString(err));
@@ -134,8 +134,8 @@ int main(int argc, char **argv)
 	//Check results on CPU
 	MatrixMul(A, B, C2, SIZE);
 
-    MatrixPrint(C, SIZE);
-    MatrixPrint(C2, SIZE);
+    //MatrixPrint(C, SIZE);
+    //MatrixPrint(C2, SIZE);
 
 	for(int i = 0; i < SIZE * SIZE; ++i){
 
@@ -157,6 +157,7 @@ int main(int argc, char **argv)
 	cudaFree(A.elements);
 	cudaFree(B.elements);
 	cudaFree(C.elements);
+    cudaDeviceReset();
     free(C2.elements);
 
     printf("Done\n");

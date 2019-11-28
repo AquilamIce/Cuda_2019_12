@@ -85,7 +85,7 @@ int main(int argc, char **argv)
 	matrixType *matA;
 	matrixType *matB;
 	matrixType *matC;
-	matrixType *matC2 = (matrixType*)calloc(SIZE, sizeof(matrixType));
+	matrixType *matC2 = (matrixType*)calloc(SIZE * SIZE, sizeof(matrixType));
 	cudaMallocManaged(&matA, SIZE * SIZE * sizeof(matrixType));
 	cudaMallocManaged(&matB, SIZE * SIZE * sizeof(matrixType));
 	cudaMallocManaged(&matC, SIZE * SIZE * sizeof(matrixType));
