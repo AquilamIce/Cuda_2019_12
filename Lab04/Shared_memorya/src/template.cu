@@ -30,7 +30,7 @@
 // defines
 #define matrixType float // definition of matrixType variables
 #define BLOCK_SIZE 16 // threads per block
-#define SIZE 32 //size of square matrix
+#define SIZE 16 //size of square matrix
 
 
 //Structure to store matrices
@@ -139,7 +139,7 @@ int main(int argc, char **argv)
 
 	for(int i = 0; i < SIZE * SIZE; ++i){
 
-		if(fabs(C.elements[i] - C2.elements[i]) > 1e-5){
+		if(fabs(C.elements[i] - C2.elements[i]) > 1e-4){
 
             fprintf(stderr, "Result verification failed at element %d!\t%f|%f\n", i, C.elements[i], C2.elements[i]);
             exit(EXIT_FAILURE);

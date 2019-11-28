@@ -32,7 +32,7 @@
 
 #define matrixType float // definition of matrixType variables
 #define BLOCK_SIZE 16 //256 threads per block
-#define SIZE 32 //size of square matrix
+#define SIZE 16 //size of square matrix
 
 
 //functions' declarations & definitions
@@ -119,9 +119,13 @@ int main(int argc, char **argv)
 	//Check results on CPU
 	MatrixMul(matA, matB, matC2, SIZE);
 
+	MatrixPrint(matC, SIZE);
+
+	MatrixPrint(matC2, SIZE);
+
 	for(int i = 0; i < SIZE * SIZE; ++i){
 
-		if(fabs(matC[i] - matC2[i]) > 1e-5){
+		if(fabs(matC[i] - matC2[i]) > 1e-4){
 
             fprintf(stderr, "Result verification failed at element %d!\t%f|%f\n", i, matC[i], matC2[i]);
             exit(EXIT_FAILURE);
@@ -130,9 +134,7 @@ int main(int argc, char **argv)
 
 	}
 
-	//MatrixPrint(matC, SIZE);
 
-	//MatrixPrint(matC2, SIZE);
 
     printf("Test PASSED\n");
 
