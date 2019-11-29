@@ -57,8 +57,19 @@ void InitializeMatrix(Matrix &A)
 		A._elements[i] = rand()/(float)RAND_MAX;
 }
 
-void CublasMultiply(Matrix &A, Matrix &B, Matrix &C)
+void CublasMultiply(Matrix &matA, Matrix &matB, Matrix &matC)
 {
+	int m = matB._width;
+	int n = matA._height;
+	int k = matA._width;
+
+	int lda = matB._width;
+	int ldb = matA._width;
+	int ldc = matB._width;
+
+	float *A = matA._elements;
+	float *B = matB._elements;
+	float *C = matC._elements;
 
 	const float a = 1;
 	const float b = 0;
@@ -68,7 +79,7 @@ void CublasMultiply(Matrix &A, Matrix &B, Matrix &C)
 	cublasHandle_t handle;
 	cublasCreate(&handle);
 
-	cublasSgemm(handle, CUBLAS_OP_N, CUBLAS_OP_N, B._height, A._width, B._width, alpha, B._elements, B._height, A._elements, A._width, beta, C._elements, B._height);
+	cublasSgemm(handle, CUBLAS_OP_N, CUBLAS_OP_N, m, n, k, alpha, B, lda, A, ldb, beta, C, ldc);
 
 
 	cublasDestroy(handle);

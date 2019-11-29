@@ -58,7 +58,7 @@ all: MatrixMultiplicationFinal
 MatrixMultiplicationFinal: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: NVCC Linker'
-	/usr/local/cuda-10.1/bin/nvcc --cudart static --relocatable-device-code=false -gencode arch=compute_35,code=compute_35 -gencode arch=compute_35,code=sm_35 -link -o  "MatrixMultiplicationFinal" $(OBJS) $(USER_OBJS) $(LIBS)
+	/usr/local/cuda-10.0/bin/nvcc --cudart static --relocatable-device-code=false -gencode arch=compute_35,code=compute_35 -gencode arch=compute_35,code=sm_35 -link -o  "MatrixMultiplicationFinal" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
