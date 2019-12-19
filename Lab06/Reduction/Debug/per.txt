@@ -1,0 +1,1175 @@
+==1857== NVPROF is profiling process 1857, command: ./Reduction 1
+==1857== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 0.840188
+CPU Timing [us]: 183
+GPUReduction Result: 0
+GPUNaive Result: 0.840188
+Test failed
+==1857== Profiling application: ./Reduction 1
+==1857== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:  100.00%  535.08us         1  535.08us  535.08us  535.08us  NaiveTotalKernel(double*, double*, int)
+      API calls:   98.83%  332.98ms         3  110.99ms  9.8480us  332.95ms  cudaMallocManaged
+                    0.59%  1.9959ms         1  1.9959ms  1.9959ms  1.9959ms  cuDeviceGetName
+                    0.22%  755.82us         1  755.82us  755.82us  755.82us  cuDeviceTotalMem
+                    0.16%  551.26us         2  275.63us  14.597us  536.66us  cudaDeviceSynchronize
+                    0.11%  356.54us        96  3.7130us     838ns  115.38us  cuDeviceGetAttribute
+                    0.04%  149.46us         3  49.820us  15.644us  93.028us  cudaFree
+                    0.03%  111.26us         2  55.629us  4.1910us  107.07us  cudaLaunchKernel
+                    0.00%  11.104us         1  11.104us  11.104us  11.104us  cuDeviceGetPCIBusId
+                    0.00%  4.4000us         3  1.4660us     978ns  2.3750us  cuDeviceGetCount
+                    0.00%  2.4440us         2  1.2220us     978ns  1.4660us  cuDeviceGet
+                    0.00%  1.1870us         1  1.1870us  1.1870us  1.1870us  cuDeviceGetUuid
+
+==1857== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.912000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.176000us  Device To Host
+       1         -         -         -           -  529.2160us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==1879== NVPROF is profiling process 1879, command: ./Reduction 2
+==1879== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 1.23457
+CPU Timing [us]: 177
+GPUReduction Result: 1.23457
+GPUNaive Result: 1.23457
+Test passed
+==1879== Profiling application: ./Reduction 2
+==1879== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.31%  546.50us         1  546.50us  546.50us  546.50us  ReductionTotalKernel(double*, double*, int)
+                    0.69%  3.8080us         1  3.8080us  3.8080us  3.8080us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.46%  315.50ms         3  105.17ms  18.577us  315.44ms  cudaMallocManaged
+                    0.18%  556.71us         2  278.35us  5.8660us  550.84us  cudaDeviceSynchronize
+                    0.16%  497.83us         1  497.83us  497.83us  497.83us  cuDeviceTotalMem
+                    0.10%  308.56us        96  3.2140us     838ns  103.64us  cuDeviceGetAttribute
+                    0.04%  134.51us         3  44.838us  15.714us  75.638us  cudaFree
+                    0.04%  132.07us         2  66.035us  29.823us  102.25us  cudaLaunchKernel
+                    0.02%  70.470us         1  70.470us  70.470us  70.470us  cuDeviceGetName
+                    0.00%  10.197us         1  10.197us  10.197us  10.197us  cuDeviceGetPCIBusId
+                    0.00%  5.0300us         3  1.6760us     978ns  3.0040us  cuDeviceGetCount
+                    0.00%  2.8630us         2  1.4310us  1.0480us  1.8150us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==1879== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.912000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.016000us  Device To Host
+       1         -         -         -           -  535.2320us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==1905== NVPROF is profiling process 1905, command: ./Reduction 4
+==1905== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 2.81611
+CPU Timing [us]: 196
+GPUReduction Result: 2.81611
+GPUNaive Result: 2.81611
+Test passed
+==1905== Profiling application: ./Reduction 4
+==1905== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.35%  583.75us         1  583.75us  583.75us  583.75us  ReductionTotalKernel(double*, double*, int)
+                    0.65%  3.8080us         1  3.8080us  3.8080us  3.8080us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.43%  304.49ms         3  101.50ms  9.7080us  304.46ms  cudaMallocManaged
+                    0.19%  594.07us         2  297.04us  5.7270us  588.34us  cudaDeviceSynchronize
+                    0.17%  528.70us         1  528.70us  528.70us  528.70us  cuDeviceTotalMem
+                    0.10%  295.57us        96  3.0780us     838ns  94.216us  cuDeviceGetAttribute
+                    0.04%  136.19us         3  45.396us  15.993us  76.266us  cudaFree
+                    0.04%  123.20us         2  61.600us  18.997us  104.20us  cudaLaunchKernel
+                    0.01%  38.133us         1  38.133us  38.133us  38.133us  cuDeviceGetName
+                    0.00%  10.826us         1  10.826us  10.826us  10.826us  cuDeviceGetPCIBusId
+                    0.00%  4.4000us         3  1.4660us     908ns  2.4450us  cuDeviceGetCount
+                    0.00%  2.5840us         2  1.2920us     908ns  1.6760us  cuDeviceGet
+                    0.00%  1.1180us         1  1.1180us  1.1180us  1.1180us  cuDeviceGetUuid
+
+==1905== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.944000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.176000us  Device To Host
+       1         -         -         -           -  572.3840us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==1928== NVPROF is profiling process 1928, command: ./Reduction 8
+==1928== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 5.02876
+CPU Timing [us]: 182
+GPUReduction Result: 5.02876
+GPUNaive Result: 5.02876
+Test passed
+==1928== Profiling application: ./Reduction 8
+==1928== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.36%  582.28us         1  582.28us  582.28us  582.28us  ReductionTotalKernel(double*, double*, int)
+                    0.64%  3.7440us         1  3.7440us  3.7440us  3.7440us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.48%  323.47ms         3  107.82ms  33.454us  323.40ms  cudaMallocManaged
+                    0.18%  593.30us         2  296.65us  7.0540us  586.25us  cudaDeviceSynchronize
+                    0.14%  459.07us         1  459.07us  459.07us  459.07us  cuDeviceTotalMem
+                    0.09%  306.67us        96  3.1940us     838ns  103.99us  cuDeviceGetAttribute
+                    0.04%  131.86us         3  43.953us  15.155us  75.638us  cudaFree
+                    0.03%  103.65us         2  51.822us  15.994us  87.651us  cudaLaunchKernel
+                    0.03%  81.854us         1  81.854us  81.854us  81.854us  cuDeviceGetName
+                    0.00%  10.616us         1  10.616us  10.616us  10.616us  cuDeviceGetPCIBusId
+                    0.00%  4.7490us         3  1.5830us     977ns  2.6540us  cuDeviceGetCount
+                    0.00%  2.5850us         2  1.2920us  1.0480us  1.5370us  cuDeviceGet
+                    0.00%  1.1870us         1  1.1870us  1.1870us  1.1870us  cuDeviceGetUuid
+
+==1928== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.912000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.176000us  Device To Host
+       1         -         -         -           -  571.2320us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==1954== NVPROF is profiling process 1954, command: ./Reduction 16
+==1954== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 9.71338
+CPU Timing [us]: 196
+GPUReduction Result: 9.71338
+GPUNaive Result: 9.71338
+Test passed
+==1954== Profiling application: ./Reduction 16
+==1954== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.37%  548.45us         1  548.45us  548.45us  548.45us  ReductionTotalKernel(double*, double*, int)
+                    0.63%  3.4560us         1  3.4560us  3.4560us  3.4560us  NaiveTotalKernel(double*, double*, int)
+      API calls:   98.08%  298.41ms         3  99.470ms  9.9180us  298.38ms  cudaMallocManaged
+                    1.48%  4.4985ms        96  46.859us     838ns  4.2672ms  cuDeviceGetAttribute
+                    0.18%  557.20us         2  278.60us  5.2380us  551.96us  cudaDeviceSynchronize
+                    0.15%  458.09us         1  458.09us  458.09us  458.09us  cuDeviceTotalMem
+                    0.05%  143.66us         3  47.887us  16.552us  81.365us  cudaFree
+                    0.04%  136.89us         2  68.444us  17.810us  119.08us  cudaLaunchKernel
+                    0.01%  41.975us         1  41.975us  41.975us  41.975us  cuDeviceGetName
+                    0.00%  12.222us         1  12.222us  12.222us  12.222us  cuDeviceGetPCIBusId
+                    0.00%  4.6800us         3  1.5600us  1.0470us  2.5150us  cuDeviceGetCount
+                    0.00%  2.5840us         2  1.2920us     908ns  1.6760us  cuDeviceGet
+                    0.00%  1.3270us         1  1.3270us  1.3270us  1.3270us  cuDeviceGetUuid
+
+==1954== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.880000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.144000us  Device To Host
+       1         -         -         -           -  537.6320us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==1980== NVPROF is profiling process 1980, command: ./Reduction 32
+==1980== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 16.381
+CPU Timing [us]: 181
+GPUReduction Result: 16.381
+GPUNaive Result: 16.381
+Test passed
+==1980== Profiling application: ./Reduction 32
+==1980== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.24%  569.54us         1  569.54us  569.54us  569.54us  ReductionTotalKernel(double*, double*, int)
+                    0.76%  4.3520us         1  4.3520us  4.3520us  4.3520us  NaiveTotalKernel(double*, double*, int)
+      API calls:   98.48%  310.10ms         3  103.37ms  19.136us  310.05ms  cudaMallocManaged
+                    1.08%  3.4146ms        96  35.568us     838ns  3.1498ms  cuDeviceGetAttribute
+                    0.18%  581.50us         2  290.75us  7.4030us  574.10us  cudaDeviceSynchronize
+                    0.15%  458.93us         1  458.93us  458.93us  458.93us  cuDeviceTotalMem
+                    0.04%  135.56us         3  45.187us  16.552us  76.686us  cudaFree
+                    0.03%  105.25us         2  52.625us  16.552us  88.699us  cudaLaunchKernel
+                    0.02%  69.492us         1  69.492us  69.492us  69.492us  cuDeviceGetName
+                    0.00%  10.127us         1  10.127us  10.127us  10.127us  cuDeviceGetPCIBusId
+                    0.00%  4.4700us         3  1.4900us     978ns  2.3740us  cuDeviceGetCount
+                    0.00%  2.7930us         2  1.3960us  1.0470us  1.7460us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==1980== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.976000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.176000us  Device To Host
+       1         -         -         -           -  558.4320us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==2002== NVPROF is profiling process 2002, command: ./Reduction 64
+==2002== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 33.2254
+CPU Timing [us]: 208
+GPUReduction Result: 33.2254
+GPUNaive Result: 33.2254
+Test passed
+==2002== Profiling application: ./Reduction 64
+==2002== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.37%  595.85us         1  595.85us  595.85us  595.85us  ReductionTotalKernel(double*, double*, int)
+                    0.63%  3.7760us         1  3.7760us  3.7760us  3.7760us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.49%  335.32ms         3  111.77ms  19.835us  335.27ms  cudaMallocManaged
+                    0.18%  607.41us         2  303.71us  5.8670us  601.54us  cudaDeviceSynchronize
+                    0.13%  448.94us         1  448.94us  448.94us  448.94us  cuDeviceTotalMem
+                    0.09%  310.52us        96  3.2340us     838ns  101.27us  cuDeviceGetAttribute
+                    0.05%  163.50us         3  54.499us  21.231us  94.495us  cudaFree
+                    0.04%  122.99us         2  61.495us  18.717us  104.27us  cudaLaunchKernel
+                    0.01%  42.044us         1  42.044us  42.044us  42.044us  cuDeviceGetName
+                    0.00%  9.5690us         1  9.5690us  9.5690us  9.5690us  cuDeviceGetPCIBusId
+                    0.00%  3.6320us         3  1.2100us     978ns  1.6760us  cuDeviceGetCount
+                    0.00%  2.3740us         2  1.1870us     838ns  1.5360us  cuDeviceGet
+                    0.00%  1.1880us         1  1.1880us  1.1880us  1.1880us  cuDeviceGetUuid
+
+==2002== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.944000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.144000us  Device To Host
+       1         -         -         -           -  584.8640us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==2028== NVPROF is profiling process 2028, command: ./Reduction 128
+==2028== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 69.0059
+CPU Timing [us]: 183
+GPUReduction Result: 69.0059
+GPUNaive Result: 69.0059
+Test passed
+==2028== Profiling application: ./Reduction 128
+==2028== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.30%  584.77us         1  584.77us  584.77us  584.77us  ReductionTotalKernel(double*, double*, int)
+                    0.70%  4.0960us         1  4.0960us  4.0960us  4.0960us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.48%  324.66ms         3  108.22ms  9.9880us  324.63ms  cudaMallocManaged
+                    0.18%  596.38us         2  298.19us  7.2640us  589.11us  cudaDeviceSynchronize
+                    0.14%  457.95us         1  457.95us  457.95us  457.95us  cuDeviceTotalMem
+                    0.09%  305.77us        96  3.1850us     838ns  102.11us  cuDeviceGetAttribute
+                    0.04%  133.68us         3  44.558us  16.762us  75.708us  cudaFree
+                    0.04%  121.73us         2  60.867us  15.435us  106.30us  cudaLaunchKernel
+                    0.02%  68.096us         1  68.096us  68.096us  68.096us  cuDeviceGetName
+                    0.00%  9.4290us         1  9.4290us  9.4290us  9.4290us  cuDeviceGetPCIBusId
+                    0.00%  4.5400us         3  1.5130us  1.0480us  2.3740us  cuDeviceGetCount
+                    0.00%  2.7930us         2  1.3960us  1.0470us  1.7460us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==2028== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.880000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.176000us  Device To Host
+       1         -         -         -           -  574.3680us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==2054== NVPROF is profiling process 2054, command: ./Reduction 256
+==2054== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 133.853
+CPU Timing [us]: 222
+GPUReduction Result: 133.853
+GPUNaive Result: 133.853
+Test passed
+==2054== Profiling application: ./Reduction 256
+==2054== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.26%  577.93us         1  577.93us  577.93us  577.93us  ReductionTotalKernel(double*, double*, int)
+                    0.74%  4.2880us         1  4.2880us  4.2880us  4.2880us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.43%  314.11ms         3  104.70ms  18.997us  314.06ms  cudaMallocManaged
+                    0.19%  589.18us         2  294.59us  6.7050us  582.48us  cudaDeviceSynchronize
+                    0.14%  457.88us         1  457.88us  457.88us  457.88us  cuDeviceTotalMem
+                    0.10%  322.74us        96  3.3610us     838ns  104.48us  cuDeviceGetAttribute
+                    0.06%  183.89us         3  61.297us  24.584us  105.32us  cudaFree
+                    0.05%  170.34us         2  85.171us  22.070us  148.27us  cudaLaunchKernel
+                    0.02%  70.400us         1  70.400us  70.400us  70.400us  cuDeviceGetName
+                    0.00%  9.8480us         1  9.8480us  9.8480us  9.8480us  cuDeviceGetPCIBusId
+                    0.00%  4.8200us         3  1.6060us     978ns  2.6540us  cuDeviceGetCount
+                    0.00%  2.5140us         2  1.2570us     978ns  1.5360us  cuDeviceGet
+                    0.00%  1.2580us         1  1.2580us  1.2580us  1.2580us  cuDeviceGetUuid
+
+==2054== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.912000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.176000us  Device To Host
+       1         -         -         -           -  567.5200us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==2076== NVPROF is profiling process 2076, command: ./Reduction 512
+==2076== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 261.051
+CPU Timing [us]: 182
+GPUReduction Result: 261.051
+GPUNaive Result: 261.051
+Test passed
+==2076== Profiling application: ./Reduction 512
+==2076== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.20%  514.37us         1  514.37us  514.37us  514.37us  ReductionTotalKernel(double*, double*, int)
+                    0.80%  4.1600us         1  4.1600us  4.1600us  4.1600us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.49%  315.95ms         3  105.32ms  19.904us  315.88ms  cudaMallocManaged
+                    0.17%  526.88us         2  263.44us  7.3340us  519.55us  cudaDeviceSynchronize
+                    0.14%  441.68us         1  441.68us  441.68us  441.68us  cuDeviceTotalMem
+                    0.10%  307.44us        96  3.2020us     838ns  100.57us  cuDeviceGetAttribute
+                    0.04%  138.78us         2  69.387us  17.460us  121.32us  cudaLaunchKernel
+                    0.04%  135.77us         3  45.257us  16.343us  76.337us  cudaFree
+                    0.01%  41.765us         1  41.765us  41.765us  41.765us  cuDeviceGetName
+                    0.00%  10.686us         1  10.686us  10.686us  10.686us  cuDeviceGetPCIBusId
+                    0.00%  3.7720us         3  1.2570us  1.0480us  1.6060us  cuDeviceGetCount
+                    0.00%  2.3740us         2  1.1870us     908ns  1.4660us  cuDeviceGet
+                    0.00%  1.1870us         1  1.1870us  1.1870us  1.1870us  cuDeviceGetUuid
+
+==2076== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.912000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.176000us  Device To Host
+       1         -         -         -           -  503.7440us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==2102== NVPROF is profiling process 2102, command: ./Reduction 1024
+==2102== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 518.913
+CPU Timing [us]: 201
+GPUReduction Result: 518.913
+GPUNaive Result: 518.913
+Test passed
+==2102== Profiling application: ./Reduction 1024
+==2102== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.08%  574.79us         1  574.79us  574.79us  574.79us  ReductionTotalKernel(double*, double*, int)
+                    0.92%  5.3440us         1  5.3440us  5.3440us  5.3440us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.53%  345.20ms         3  115.07ms  18.647us  345.15ms  cudaMallocManaged
+                    0.17%  584.92us         2  292.46us  6.9140us  578.01us  cudaDeviceSynchronize
+                    0.13%  443.14us         1  443.14us  443.14us  443.14us  cuDeviceTotalMem
+                    0.09%  298.22us        96  3.1060us     838ns  99.105us  cuDeviceGetAttribute
+                    0.04%  145.55us         3  48.516us  16.553us  88.419us  cudaFree
+                    0.03%  118.10us         2  59.050us  15.993us  102.11us  cudaLaunchKernel
+                    0.01%  38.483us         1  38.483us  38.483us  38.483us  cuDeviceGetName
+                    0.00%  10.476us         1  10.476us  10.476us  10.476us  cuDeviceGetPCIBusId
+                    0.00%  3.5620us         3  1.1870us     908ns  1.6760us  cuDeviceGetCount
+                    0.00%  2.3750us         2  1.1870us     908ns  1.4670us  cuDeviceGet
+                    0.00%  1.1170us         1  1.1170us  1.1170us  1.1170us  cuDeviceGetUuid
+
+==2102== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  8.0000KB  56.000KB  64.00000KB  7.264000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.016000us  Device To Host
+       1         -         -         -           -  563.3920us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==2129== NVPROF is profiling process 2129, command: ./Reduction 2048
+==2129== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 1026.9
+CPU Timing [us]: 188
+GPUReduction Result: 1026.9
+GPUNaive Result: 1026.9
+Test passed
+==2129== Profiling application: ./Reduction 2048
+==2129== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   98.84%  646.76us         1  646.76us  646.76us  646.76us  ReductionTotalKernel(double*, double*, int)
+                    1.16%  7.6160us         1  7.6160us  7.6160us  7.6160us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.45%  315.18ms         3  105.06ms  9.9870us  315.12ms  cudaMallocManaged
+                    0.21%  659.37us         2  329.69us  9.0800us  650.29us  cudaDeviceSynchronize
+                    0.15%  471.36us         1  471.36us  471.36us  471.36us  cuDeviceTotalMem
+                    0.10%  301.23us        96  3.1370us     838ns  97.917us  cuDeviceGetAttribute
+                    0.04%  135.14us         3  45.047us  16.902us  78.432us  cudaFree
+                    0.04%  116.98us         2  58.492us  15.993us  100.99us  cudaLaunchKernel
+                    0.01%  45.816us         1  45.816us  45.816us  45.816us  cuDeviceGetName
+                    0.00%  10.616us         1  10.616us  10.616us  10.616us  cuDeviceGetPCIBusId
+                    0.00%  5.0290us         3  1.6760us  1.0480us  2.7940us  cuDeviceGetCount
+                    0.00%  2.9340us         2  1.4670us  1.0480us  1.8860us  cuDeviceGet
+                    0.00%  1.1870us         1  1.1870us  1.1870us  1.1870us  cuDeviceGetUuid
+
+==2129== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  16.000KB  48.000KB  64.00000KB  6.912000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.240000us  Device To Host
+       1         -         -         -           -  633.7280us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==2151== NVPROF is profiling process 2151, command: ./Reduction 4096
+==2151== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 2049.71
+CPU Timing [us]: 215
+GPUReduction Result: 2049.71
+GPUNaive Result: 2049.71
+Test passed
+==2151== Profiling application: ./Reduction 4096
+==2151== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   98.25%  689.70us         1  689.70us  689.70us  689.70us  ReductionTotalKernel(double*, double*, int)
+                    1.75%  12.320us         1  12.320us  12.320us  12.320us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.43%  314.35ms         3  104.78ms  19.486us  314.30ms  cudaMallocManaged
+                    0.22%  708.26us         2  354.13us  14.317us  693.94us  cudaDeviceSynchronize
+                    0.15%  475.55us         1  475.55us  475.55us  475.55us  cuDeviceTotalMem
+                    0.10%  301.23us        96  3.1370us     838ns  99.035us  cuDeviceGetAttribute
+                    0.04%  134.45us         3  44.815us  16.412us  78.083us  cudaFree
+                    0.03%  101.62us         2  50.810us  14.737us  86.883us  cudaLaunchKernel
+                    0.01%  46.654us         1  46.654us  46.654us  46.654us  cuDeviceGetName
+                    0.00%  10.756us         1  10.756us  10.756us  10.756us  cuDeviceGetPCIBusId
+                    0.00%  5.5870us         3  1.8620us  1.0470us  3.3530us  cuDeviceGetCount
+                    0.00%  2.7240us         2  1.3620us  1.0480us  1.6760us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==2151== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  32.000KB  32.000KB  32.000KB  64.00000KB  6.944000us  Host To Device
+       2  32.000KB  4.0000KB  60.000KB  64.00000KB  6.176000us  Device To Host
+       1         -         -         -           -  672.8000us  Gpu page fault groups
+Total CPU Page faults: 2
+
+
+
+
+
+==2177== NVPROF is profiling process 2177, command: ./Reduction 8192
+==2177== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 4089.36
+CPU Timing [us]: 213
+GPUReduction Result: 4089.36
+GPUNaive Result: 4089.36
+Test passed
+==2177== Profiling application: ./Reduction 8192
+==2177== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   97.74%  945.19us         1  945.19us  945.19us  945.19us  ReductionTotalKernel(double*, double*, int)
+                    2.26%  21.824us         1  21.824us  21.824us  21.824us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.35%  329.80ms         3  109.93ms  19.486us  329.75ms  cudaMallocManaged
+                    0.29%  973.24us         2  486.62us  24.375us  948.87us  cudaDeviceSynchronize
+                    0.14%  464.10us         1  464.10us  464.10us  464.10us  cuDeviceTotalMem
+                    0.12%  389.43us        96  4.0560us     838ns  180.19us  cuDeviceGetAttribute
+                    0.04%  147.79us         3  49.261us  26.400us  79.829us  cudaFree
+                    0.04%  117.06us         2  58.527us  15.505us  101.55us  cudaLaunchKernel
+                    0.01%  40.299us         1  40.299us  40.299us  40.299us  cuDeviceGetName
+                    0.00%  10.616us         1  10.616us  10.616us  10.616us  cuDeviceGetPCIBusId
+                    0.00%  3.6310us         3  1.2100us     838ns  1.7460us  cuDeviceGetCount
+                    0.00%  2.6550us         2  1.3270us     978ns  1.6770us  cuDeviceGet
+                    0.00%  1.0480us         1  1.0480us  1.0480us  1.0480us  cuDeviceGetUuid
+
+==2177== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       1  64.000KB  64.000KB  64.000KB  64.00000KB  6.432000us  Host To Device
+       4  32.000KB  4.0000KB  60.000KB  128.0000KB  12.48000us  Device To Host
+       2         -         -         -           -  927.1040us  Gpu page fault groups
+Total CPU Page faults: 3
+
+
+
+
+
+==2203== NVPROF is profiling process 2203, command: ./Reduction 16384
+==2203== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 8143.62
+CPU Timing [us]: 330
+GPUReduction Result: 8143.62
+GPUNaive Result: 8143.62
+Test passed
+==2203== Profiling application: ./Reduction 16384
+==2203== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   96.10%  941.86us         1  941.86us  941.86us  941.86us  ReductionTotalKernel(double*, double*, int)
+                    3.90%  38.176us         1  38.176us  38.176us  38.176us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.37%  323.32ms         3  107.77ms  9.9870us  323.30ms  cudaMallocManaged
+                    0.30%  987.91us         2  493.95us  41.137us  946.77us  cudaDeviceSynchronize
+                    0.14%  442.51us         1  442.51us  442.51us  442.51us  cuDeviceTotalMem
+                    0.09%  305.34us        96  3.1800us     838ns  93.308us  cuDeviceGetAttribute
+                    0.05%  147.58us         3  49.191us  16.273us  91.352us  cudaFree
+                    0.04%  115.80us         2  57.899us  16.413us  99.385us  cudaLaunchKernel
+                    0.01%  39.251us         1  39.251us  39.251us  39.251us  cuDeviceGetName
+                    0.00%  10.057us         1  10.057us  10.057us  10.057us  cuDeviceGetPCIBusId
+                    0.00%  3.6320us         3  1.2100us     839ns  1.7460us  cuDeviceGetCount
+                    0.00%  2.4440us         2  1.2220us     908ns  1.5360us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==2203== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       5  25.600KB  4.0000KB  52.000KB  128.0000KB  13.98400us  Host To Device
+       6  42.666KB  4.0000KB  124.00KB  256.0000KB  23.61600us  Device To Host
+       2         -         -         -           -  917.8240us  Gpu page fault groups
+Total CPU Page faults: 5
+
+
+
+
+
+==2225== NVPROF is profiling process 2225, command: ./Reduction 32768
+==2225== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 16330.6
+CPU Timing [us]: 486
+GPUReduction Result: 16330.6
+GPUNaive Result: 16330.6
+Test passed
+==2225== Profiling application: ./Reduction 32768
+==2225== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   93.63%  1.0435ms         1  1.0435ms  1.0435ms  1.0435ms  ReductionTotalKernel(double*, double*, int)
+                    6.37%  71.040us         1  71.040us  71.040us  71.040us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.36%  344.03ms         3  114.68ms  18.857us  343.98ms  cudaMallocManaged
+                    0.32%  1.1207ms         2  560.34us  72.844us  1.0478ms  cudaDeviceSynchronize
+                    0.13%  443.84us         1  443.84us  443.84us  443.84us  cuDeviceTotalMem
+                    0.09%  305.98us        96  3.1870us     838ns  101.90us  cuDeviceGetAttribute
+                    0.05%  160.36us         3  53.452us  17.321us  101.62us  cudaFree
+                    0.03%  119.78us         2  59.889us  16.064us  103.71us  cudaLaunchKernel
+                    0.01%  39.041us         1  39.041us  39.041us  39.041us  cuDeviceGetName
+                    0.00%  9.7770us         1  9.7770us  9.7770us  9.7770us  cuDeviceGetPCIBusId
+                    0.00%  3.5600us         3  1.1860us     907ns  1.6760us  cuDeviceGetCount
+                    0.00%  2.3050us         2  1.1520us     838ns  1.4670us  cuDeviceGet
+                    0.00%  1.1170us         1  1.1170us  1.1170us  1.1170us  cuDeviceGetUuid
+
+==2225== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       7  36.571KB  4.0000KB  120.00KB  256.0000KB  25.82400us  Host To Device
+       8  40.000KB  4.0000KB  124.00KB  320.0000KB  29.69600us  Device To Host
+       3         -         -         -           -  1.003680ms  Gpu page fault groups
+Total CPU Page faults: 7
+
+
+
+
+
+==2251== NVPROF is profiling process 2251, command: ./Reduction 65536
+==2251== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 32709.5
+CPU Timing [us]: 670
+GPUReduction Result: 32709.5
+GPUNaive Result: 32709.5
+Test passed
+==2251== Profiling application: ./Reduction 65536
+==2251== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   89.80%  1.2040ms         1  1.2040ms  1.2040ms  1.2040ms  ReductionTotalKernel(double*, double*, int)
+                   10.20%  136.80us         1  136.80us  136.80us  136.80us  NaiveTotalKernel(double*, double*, int)
+      API calls:   99.29%  343.28ms         3  114.43ms  19.486us  343.23ms  cudaMallocManaged
+                    0.39%  1.3482ms         2  674.11us  139.75us  1.2085ms  cudaDeviceSynchronize
+                    0.13%  444.05us         1  444.05us  444.05us  444.05us  cuDeviceTotalMem
+                    0.09%  308.56us        96  3.2140us     838ns  95.263us  cuDeviceGetAttribute
+                    0.06%  191.71us         3  63.904us  16.482us  136.05us  cudaFree
+                    0.03%  107.28us         2  53.638us  16.203us  91.073us  cudaLaunchKernel
+                    0.01%  39.112us         1  39.112us  39.112us  39.112us  cuDeviceGetName
+                    0.00%  10.756us         1  10.756us  10.756us  10.756us  cuDeviceGetPCIBusId
+                    0.00%  3.7710us         3  1.2570us     908ns  1.8160us  cuDeviceGetCount
+                    0.00%  2.3750us         2  1.1870us     908ns  1.4670us  cuDeviceGet
+                    0.00%  1.1870us         1  1.1870us  1.1870us  1.1870us  cuDeviceGetUuid
+
+==2251== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       9  56.889KB  4.0000KB  244.00KB  512.0000KB  48.67200us  Host To Device
+      10  57.600KB  4.0000KB  252.00KB  576.0000KB  50.81600us  Device To Host
+       4         -         -         -           -  1.138816ms  Gpu page fault groups
+Total CPU Page faults: 9
+
+
+
+
+
+==2278== NVPROF is profiling process 2278, command: ./Reduction 131072
+==2278== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 65510.7
+CPU Timing [us]: 1158
+GPUReduction Result: 65510.7
+GPUNaive Result: 65510.7
+Test passed
+==2278== Profiling application: ./Reduction 131072
+==2278== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   84.23%  1.4247ms         1  1.4247ms  1.4247ms  1.4247ms  ReductionTotalKernel(double*, double*, int)
+                   15.77%  266.69us         1  266.69us  266.69us  266.69us  NaiveTotalKernel(double*, double*, int)
+      API calls:   96.42%  322.89ms         3  107.63ms  18.787us  322.84ms  cudaMallocManaged
+                    2.70%  9.0581ms         1  9.0581ms  9.0581ms  9.0581ms  cuDeviceGetName
+                    0.51%  1.6982ms         2  849.10us  269.73us  1.4285ms  cudaDeviceSynchronize
+                    0.15%  519.06us         1  519.06us  519.06us  519.06us  cuDeviceTotalMem
+                    0.10%  336.15us        96  3.5010us     838ns  107.84us  cuDeviceGetAttribute
+                    0.08%  255.06us         3  85.020us  16.343us  198.07us  cudaFree
+                    0.03%  113.21us         2  56.606us  15.435us  97.777us  cudaLaunchKernel
+                    0.00%  10.337us         1  10.337us  10.337us  10.337us  cuDeviceGetPCIBusId
+                    0.00%  4.7490us         3  1.5830us     977ns  2.6540us  cuDeviceGetCount
+                    0.00%  2.7940us         2  1.3970us  1.0480us  1.7460us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==2278== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+      11  93.091KB  4.0000KB  500.00KB  1.000000MB  93.21600us  Host To Device
+      12  90.666KB  4.0000KB  508.00KB  1.062500MB  92.16000us  Device To Host
+       5         -         -         -           -  1.302848ms  Gpu page fault groups
+Total CPU Page faults: 11
+
+
+
+
+
+==2300== NVPROF is profiling process 2300, command: ./Reduction 262144
+==2300== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 131074
+CPU Timing [us]: 3180
+GPUReduction Result: 131074
+GPUNaive Result: 131074
+Test passed
+==2300== Profiling application: ./Reduction 262144
+==2300== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   78.40%  1.9174ms         1  1.9174ms  1.9174ms  1.9174ms  ReductionTotalKernel(double*, double*, int)
+                   21.60%  528.23us         1  528.23us  528.23us  528.23us  NaiveTotalKernel(double*, double*, int)
+      API calls:   98.88%  346.33ms         3  115.44ms  21.441us  346.25ms  cudaMallocManaged
+                    0.70%  2.4540ms         2  1.2270ms  532.12us  1.9219ms  cudaDeviceSynchronize
+                    0.15%  529.05us         3  176.35us  40.508us  385.66us  cudaFree
+                    0.13%  444.40us         1  444.40us  444.40us  444.40us  cuDeviceTotalMem
+                    0.08%  290.89us        96  3.0300us     838ns  93.378us  cuDeviceGetAttribute
+                    0.04%  152.81us         2  76.406us  24.584us  128.23us  cudaLaunchKernel
+                    0.01%  38.413us         1  38.413us  38.413us  38.413us  cuDeviceGetName
+                    0.00%  10.058us         1  10.058us  10.058us  10.058us  cuDeviceGetPCIBusId
+                    0.00%  3.4910us         3  1.1630us     838ns  1.6060us  cuDeviceGetCount
+                    0.00%  2.3040us         2  1.1520us     908ns  1.3960us  cuDeviceGet
+                    0.00%  1.1170us         1  1.1170us  1.1170us  1.1170us  cuDeviceGetUuid
+
+==2300== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+      15  136.53KB  4.0000KB  0.9922MB  2.000000MB  181.4400us  Host To Device
+      14  150.86KB  4.0000KB  0.9961MB  2.062500MB  174.3680us  Device To Host
+       6         -         -         -           -  1.691040ms  Gpu page fault groups
+Total CPU Page faults: 13
+
+
+
+
+
+==2327== NVPROF is profiling process 2327, command: ./Reduction 524288
+==2327== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 262212
+CPU Timing [us]: 4199
+GPUReduction Result: 262212
+GPUNaive Result: 262212
+Test passed
+==2327== Profiling application: ./Reduction 524288
+==2327== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   73.17%  2.8638ms         1  2.8638ms  2.8638ms  2.8638ms  ReductionTotalKernel(double*, double*, int)
+                   26.83%  1.0504ms         1  1.0504ms  1.0504ms  1.0504ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   97.26%  293.31ms         3  97.769ms  10.686us  293.26ms  cudaMallocManaged
+                    1.30%  3.9214ms         2  1.9607ms  1.0536ms  2.8678ms  cudaDeviceSynchronize
+                    1.03%  3.1066ms        96  32.360us     838ns  2.6706ms  cuDeviceGetAttribute
+                    0.18%  536.45us         3  178.82us  24.375us  444.61us  cudaFree
+                    0.17%  503.42us         1  503.42us  503.42us  503.42us  cuDeviceTotalMem
+                    0.04%  121.66us         2  60.832us  17.321us  104.34us  cudaLaunchKernel
+                    0.02%  46.305us         1  46.305us  46.305us  46.305us  cuDeviceGetName
+                    0.00%  10.476us         1  10.476us  10.476us  10.476us  cuDeviceGetPCIBusId
+                    0.00%  4.5400us         3  1.5130us  1.0480us  2.3750us  cuDeviceGetCount
+                    0.00%  2.5840us         2  1.2920us  1.0480us  1.5360us  cuDeviceGet
+                    0.00%  1.1880us         1  1.1880us  1.1880us  1.1880us  cuDeviceGetUuid
+
+==2327== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+      29  141.24KB  4.0000KB  0.9922MB  4.000000MB  368.3840us  Host To Device
+      26  160.00KB  4.0000KB  0.9961MB  4.062500MB  343.0080us  Device To Host
+      12         -         -         -           -  2.430208ms  Gpu page fault groups
+Total CPU Page faults: 25
+
+
+
+
+
+==2353== NVPROF is profiling process 2353, command: ./Reduction 1048576
+==2353== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 524285
+CPU Timing [us]: 8061
+GPUReduction Result: 524285
+GPUNaive Result: 524285
+Test passed
+==2353== Profiling application: ./Reduction 1048576
+==2353== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   69.85%  4.8558ms         1  4.8558ms  4.8558ms  4.8558ms  ReductionTotalKernel(double*, double*, int)
+                   30.15%  2.0964ms         1  2.0964ms  2.0964ms  2.0964ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   97.35%  323.72ms         3  107.91ms  42.115us  323.61ms  cudaMallocManaged
+                    2.09%  6.9589ms         2  3.4795ms  2.0988ms  4.8601ms  cudaDeviceSynchronize
+                    0.27%  897.88us         3  299.29us  24.165us  807.79us  cudaFree
+                    0.14%  457.32us         1  457.32us  457.32us  457.32us  cuDeviceTotalMem
+                    0.09%  302.77us        96  3.1530us     838ns  101.62us  cuDeviceGetAttribute
+                    0.04%  118.45us         2  59.225us  16.762us  101.69us  cudaLaunchKernel
+                    0.02%  57.480us         1  57.480us  57.480us  57.480us  cuDeviceGetName
+                    0.00%  9.2190us         1  9.2190us  9.2190us  9.2190us  cuDeviceGetPCIBusId
+                    0.00%  4.7500us         3  1.5830us  1.0470us  2.5850us  cuDeviceGetCount
+                    0.00%  2.6530us         2  1.3260us  1.0470us  1.6060us  cuDeviceGet
+                    0.00%  1.1870us         1  1.1870us  1.1870us  1.1870us  cuDeviceGetUuid
+
+==2353== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+      55  148.95KB  4.0000KB  0.9922MB  8.000000MB  736.4160us  Host To Device
+      50  165.12KB  4.0000KB  0.9961MB  8.062500MB  679.5200us  Device To Host
+      24         -         -         -           -  4.012960ms  Gpu page fault groups
+Total CPU Page faults: 49
+
+
+
+
+
+==2375== NVPROF is profiling process 2375, command: ./Reduction 2097152
+==2375== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 1.04844e+06
+CPU Timing [us]: 15767
+GPUReduction Result: 1.04844e+06
+GPUNaive Result: 1.04844e+06
+Test passed
+==2375== Profiling application: ./Reduction 2097152
+==2375== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   67.69%  8.7716ms         1  8.7716ms  8.7716ms  8.7716ms  ReductionTotalKernel(double*, double*, int)
+                   32.31%  4.1869ms         1  4.1869ms  4.1869ms  4.1869ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   95.43%  327.13ms         3  109.04ms  20.324us  327.04ms  cudaMallocManaged
+                    3.78%  12.966ms         2  6.4828ms  4.1904ms  8.7751ms  cudaDeviceSynchronize
+                    0.51%  1.7539ms         3  584.62us  28.006us  1.6514ms  cudaFree
+                    0.13%  444.54us         1  444.54us  444.54us  444.54us  cuDeviceTotalMem
+                    0.09%  309.12us        96  3.2190us     838ns  103.44us  cuDeviceGetAttribute
+                    0.04%  139.68us         2  69.841us  19.416us  120.27us  cudaLaunchKernel
+                    0.01%  39.809us         1  39.809us  39.809us  39.809us  cuDeviceGetName
+                    0.00%  9.9870us         1  9.9870us  9.9870us  9.9870us  cuDeviceGetPCIBusId
+                    0.00%  3.9110us         3  1.3030us     978ns  1.6760us  cuDeviceGetCount
+                    0.00%  2.5150us         2  1.2570us  1.1180us  1.3970us  cuDeviceGet
+                    0.00%  1.1870us         1  1.1870us  1.1870us  1.1870us  cuDeviceGetUuid
+
+==2375== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+     113  144.99KB  4.0000KB  0.9922MB  16.00000MB  1.478880ms  Host To Device
+      98  167.84KB  4.0000KB  0.9961MB  16.06250MB  1.356704ms  Device To Host
+      49         -         -         -           -  7.102432ms  Gpu page fault groups
+Total CPU Page faults: 97
+
+
+
+
+
+==2409== NVPROF is profiling process 2409, command: ./Reduction 4194304
+==2409== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 2.09719e+06
+CPU Timing [us]: 30637
+GPUReduction Result: 2.09719e+06
+GPUNaive Result: 2.09719e+06
+Test passed
+==2409== Profiling application: ./Reduction 4194304
+==2409== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   66.89%  16.907ms         1  16.907ms  16.907ms  16.907ms  ReductionTotalKernel(double*, double*, int)
+                   33.11%  8.3700ms         1  8.3700ms  8.3700ms  8.3700ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   91.66%  321.49ms         3  107.16ms  10.476us  321.43ms  cudaMallocManaged
+                    7.21%  25.284ms         2  12.642ms  8.3732ms  16.910ms  cudaDeviceSynchronize
+                    0.85%  2.9825ms         3  994.17us  34.362us  2.8796ms  cudaFree
+                    0.13%  457.04us         1  457.04us  457.04us  457.04us  cuDeviceTotalMem
+                    0.09%  301.93us        96  3.1450us     838ns  97.289us  cuDeviceGetAttribute
+                    0.04%  144.15us         2  72.076us  17.740us  126.41us  cudaLaunchKernel
+                    0.02%  54.686us         1  54.686us  54.686us  54.686us  cuDeviceGetName
+                    0.00%  10.616us         1  10.616us  10.616us  10.616us  cuDeviceGetPCIBusId
+                    0.00%  4.8190us         3  1.6060us  1.0480us  2.6540us  cuDeviceGetCount
+                    0.00%  2.7240us         2  1.3620us  1.0480us  1.6760us  cuDeviceGet
+                    0.00%  1.1870us         1  1.1870us  1.1870us  1.1870us  cuDeviceGetUuid
+
+==2409== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+     210  156.04KB  4.0000KB  0.9961MB  32.00000MB  2.945888ms  Host To Device
+     194  169.24KB  4.0000KB  0.9961MB  32.06250MB  2.682656ms  Device To Host
+      97         -         -         -           -  13.65181ms  Gpu page fault groups
+Total CPU Page faults: 193
+
+
+
+
+
+==2437== NVPROF is profiling process 2437, command: ./Reduction 8388608
+==2437== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 4.19456e+06
+CPU Timing [us]: 63059
+GPUReduction Result: 4.19456e+06
+GPUNaive Result: 4.19456e+06
+Test passed
+==2437== Profiling application: ./Reduction 8388608
+==2437== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   67.98%  35.530ms         1  35.530ms  35.530ms  35.530ms  ReductionTotalKernel(double*, double*, int)
+                   32.02%  16.733ms         1  16.733ms  16.733ms  16.733ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   84.44%  323.66ms         3  107.89ms  10.616us  323.60ms  cudaMallocManaged
+                   13.64%  52.270ms         2  26.135ms  16.736ms  35.534ms  cudaDeviceSynchronize
+                    1.67%  6.4038ms         3  2.1346ms  37.575us  6.3014ms  cudaFree
+                    0.12%  463.05us         1  463.05us  463.05us  463.05us  cuDeviceTotalMem
+                    0.08%  288.23us        96  3.0020us     838ns  92.749us  cuDeviceGetAttribute
+                    0.05%  180.75us         2  90.374us  21.371us  159.38us  cudaLaunchKernel
+                    0.01%  37.505us         1  37.505us  37.505us  37.505us  cuDeviceGetName
+                    0.00%  9.0090us         1  9.0090us  9.0090us  9.0090us  cuDeviceGetPCIBusId
+                    0.00%  3.5620us         3  1.1870us     908ns  1.6760us  cuDeviceGetCount
+                    0.00%  2.5830us         2  1.2910us     907ns  1.6760us  cuDeviceGet
+                    0.00%  1.0480us         1  1.0480us  1.0480us  1.0480us  cuDeviceGetUuid
+
+==2437== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+     438  149.63KB  4.0000KB  0.9961MB  64.00000MB  5.971488ms  Host To Device
+     386  169.95KB  4.0000KB  0.9961MB  64.06250MB  5.358080ms  Device To Host
+     192         -         -         -           -  28.91526ms  Gpu page fault groups
+Total CPU Page faults: 385
+
+
+
+
+
+==2459== NVPROF is profiling process 2459, command: ./Reduction 16777216
+==2459== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 8.38908e+06
+CPU Timing [us]: 114992
+GPUReduction Result: 8.38908e+06
+GPUNaive Result: 8.38908e+06
+Test passed
+==2459== Profiling application: ./Reduction 16777216
+==2459== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   67.27%  68.732ms         1  68.732ms  68.732ms  68.732ms  ReductionTotalKernel(double*, double*, int)
+                   32.73%  33.447ms         1  33.447ms  33.447ms  33.447ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   74.98%  336.98ms         3  112.33ms  19.696us  336.87ms  cudaMallocManaged
+                   22.74%  102.18ms         2  51.089ms  33.449ms  68.728ms  cudaDeviceSynchronize
+                    2.05%  9.2172ms         3  3.0724ms  42.952us  9.1054ms  cudaFree
+                    0.11%  486.10us         1  486.10us  486.10us  486.10us  cuDeviceTotalMem
+                    0.07%  302.42us        96  3.1500us     838ns  100.57us  cuDeviceGetAttribute
+                    0.04%  182.84us         2  91.422us  33.873us  148.97us  cudaLaunchKernel
+                    0.01%  52.730us         1  52.730us  52.730us  52.730us  cuDeviceGetName
+                    0.00%  10.407us         1  10.407us  10.407us  10.407us  cuDeviceGetPCIBusId
+                    0.00%  4.6090us         3  1.5360us     978ns  2.5840us  cuDeviceGetCount
+                    0.00%  2.5140us         2  1.2570us     978ns  1.5360us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==2459== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+     877  149.45KB  4.0000KB  0.9922MB  128.0000MB  12.24662ms  Host To Device
+     770  170.31KB  4.0000KB  0.9961MB  128.0625MB  10.78899ms  Device To Host
+     384         -         -         -           -  55.52365ms  Gpu page fault groups
+Total CPU Page faults: 769
+
+
+
+
+
+==2486== NVPROF is profiling process 2486, command: ./Reduction 33554432
+==2486== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 1.67773e+07
+CPU Timing [us]: 196198
+GPUReduction Result: 1.67773e+07
+GPUNaive Result: 1.67773e+07
+Test passed
+==2486== Profiling application: ./Reduction 33554432
+==2486== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   67.59%  127.41ms         1  127.41ms  127.41ms  127.41ms  ReductionTotalKernel(double*, double*, int)
+                   32.41%  61.103ms         1  61.103ms  61.103ms  61.103ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   59.64%  307.05ms         3  102.35ms  11.105us  306.97ms  cudaMallocManaged
+                   36.62%  188.52ms         2  94.258ms  61.105ms  127.41ms  cudaDeviceSynchronize
+                    3.51%  18.063ms         3  6.0210ms  46.444us  17.926ms  cudaFree
+                    0.09%  442.65us         1  442.65us  442.65us  442.65us  cuDeviceTotalMem
+                    0.07%  385.80us         2  192.90us  38.412us  347.39us  cudaLaunchKernel
+                    0.06%  291.31us        96  3.0340us     838ns  94.076us  cuDeviceGetAttribute
+                    0.01%  37.575us         1  37.575us  37.575us  37.575us  cuDeviceGetName
+                    0.00%  11.314us         1  11.314us  11.314us  11.314us  cuDeviceGetPCIBusId
+                    0.00%  4.4000us         3  1.4660us     908ns  2.5140us  cuDeviceGetCount
+                    0.00%  2.4450us         2  1.2220us     908ns  1.5370us  cuDeviceGet
+                    0.00%  1.1180us         1  1.1180us  1.1180us  1.1180us  cuDeviceGetUuid
+
+==2486== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+    1719  152.50KB  4.0000KB  0.9961MB  256.0000MB  24.22208ms  Host To Device
+    1538  170.49KB  4.0000KB  0.9961MB  256.0625MB  21.42518ms  Device To Host
+     769         -         -         -           -  101.0233ms  Gpu page fault groups
+Total CPU Page faults: 1537
+
+
+
+
+
+==2517== NVPROF is profiling process 2517, command: ./Reduction 67108864
+==2517== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 3.35558e+07
+CPU Timing [us]: 533889
+GPUReduction Result: 3.35558e+07
+GPUNaive Result: 3.35558e+07
+Test passed
+==2517== Profiling application: ./Reduction 67108864
+==2517== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   64.16%  214.41ms         1  214.41ms  214.41ms  214.41ms  ReductionTotalKernel(double*, double*, int)
+                   35.84%  119.79ms         1  119.79ms  119.79ms  119.79ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   48.53%  362.61ms         3  120.87ms  10.686us  362.55ms  cudaMallocManaged
+                   44.73%  334.22ms         2  167.11ms  119.78ms  214.44ms  cudaDeviceSynchronize
+                    6.56%  49.022ms         3  16.341ms  77.733us  48.849ms  cudaFree
+                    0.07%  499.86us         1  499.86us  499.86us  499.86us  cuDeviceTotalMem
+                    0.05%  380.64us         2  190.32us  128.09us  252.55us  cudaLaunchKernel
+                    0.04%  307.44us        96  3.2020us     838ns  102.81us  cuDeviceGetAttribute
+                    0.01%  61.391us         1  61.391us  61.391us  61.391us  cuDeviceGetName
+                    0.00%  10.197us         1  10.197us  10.197us  10.197us  cuDeviceGetPCIBusId
+                    0.00%  4.8890us         3  1.6290us     978ns  2.8640us  cuDeviceGetCount
+                    0.00%  2.5840us         2  1.2920us  1.0480us  1.5360us  cuDeviceGet
+                    0.00%  1.2580us         1  1.2580us  1.2580us  1.2580us  cuDeviceGetUuid
+
+==2517== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+    3469  151.14KB  4.0000KB  0.9961MB  512.0000MB  48.15286ms  Host To Device
+    3074  170.58KB  4.0000KB  0.9961MB  512.0625MB  42.67629ms  Device To Host
+    1538         -         -         -           -  163.3051ms  Gpu page fault groups
+Total CPU Page faults: 3073
+
+
+
+
+
+==2547== NVPROF is profiling process 2547, command: ./Reduction 134217728
+==2547== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 6.71103e+07
+CPU Timing [us]: 818099
+GPUReduction Result: 6.71103e+07
+GPUNaive Result: 6.71103e+07
+Test passed
+==2547== Profiling application: ./Reduction 134217728
+==2547== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   66.85%  438.97ms         1  438.97ms  438.97ms  438.97ms  ReductionTotalKernel(double*, double*, int)
+                   33.15%  217.66ms         1  217.66ms  217.66ms  217.66ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   61.92%  656.65ms         2  328.32ms  217.68ms  438.97ms  cudaDeviceSynchronize
+                   31.26%  331.51ms         3  110.50ms  10.476us  331.40ms  cudaMallocManaged
+                    6.70%  71.094ms         3  23.698ms  77.174us  70.914ms  cudaFree
+                    0.05%  498.95us         1  498.95us  498.95us  498.95us  cuDeviceTotalMem
+                    0.03%  304.09us        96  3.1670us     838ns  100.01us  cuDeviceGetAttribute
+                    0.03%  294.24us         2  147.12us  71.168us  223.07us  cudaLaunchKernel
+                    0.01%  53.359us         1  53.359us  53.359us  53.359us  cuDeviceGetName
+                    0.00%  10.127us         1  10.127us  10.127us  10.127us  cuDeviceGetPCIBusId
+                    0.00%  4.8190us         3  1.6060us  1.1170us  2.5140us  cuDeviceGetCount
+                    0.00%  2.5840us         2  1.2920us     908ns  1.6760us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==2547== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+    6891  152.17KB  4.0000KB  0.9961MB  1.000000GB  96.54499ms  Host To Device
+    6146  170.62KB  4.0000KB  0.9961MB  1.000061GB  85.66093ms  Device To Host
+    3073         -         -         -           -  339.9060ms  Gpu page fault groups
+Total CPU Page faults: 6145
+
+
+
+
+
+==2585== NVPROF is profiling process 2585, command: ./Reduction 268435456
+==2585== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 1.34215e+08
+CPU Timing [us]: 1.6225e+06
+GPUReduction Result: 1.34215e+08
+GPUNaive Result: 1.34215e+08
+Test passed
+==2585== Profiling application: ./Reduction 268435456
+==2585== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   64.42%  775.63ms         1  775.63ms  775.63ms  775.63ms  ReductionTotalKernel(double*, double*, int)
+                   35.58%  428.39ms         1  428.39ms  428.39ms  428.39ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   72.40%  1.20404s         2  602.02ms  428.38ms  775.66ms  cudaDeviceSynchronize
+                   19.23%  319.81ms         3  106.60ms  20.045us  319.70ms  cudaMallocManaged
+                    8.16%  135.68ms         3  45.227ms  81.575us  135.52ms  cudaFree
+                    0.14%  2.2479ms         1  2.2479ms  2.2479ms  2.2479ms  cuDeviceGetName
+                    0.03%  465.14us         1  465.14us  465.14us  465.14us  cuDeviceTotalMem
+                    0.02%  342.29us         2  171.15us  96.870us  245.42us  cudaLaunchKernel
+                    0.02%  324.84us        96  3.3830us     838ns  103.37us  cuDeviceGetAttribute
+                    0.00%  9.9880us         1  9.9880us  9.9880us  9.9880us  cuDeviceGetPCIBusId
+                    0.00%  4.7500us         3  1.5830us  1.0480us  2.5840us  cuDeviceGetCount
+                    0.00%  3.0030us         2  1.5010us  1.0480us  1.9550us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==2585== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+   13813  151.82KB  4.0000KB  0.9961MB  2.000000GB  199.8217ms  Host To Device
+   12290  170.64KB  4.0000KB  0.9961MB  2.000061GB  171.2651ms  Device To Host
+    6146         -         -         -           -  594.6881ms  Gpu page fault groups
+Total CPU Page faults: 12289
+
+
+
+
+
+==2636== NVPROF is profiling process 2636, command: ./Reduction 536870912
+==2636== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 2.68443e+08
+CPU Timing [us]: 3.3207e+06
+GPUReduction Result: 2.68443e+08
+GPUNaive Result: 2.68443e+08
+Test passed
+==2636== Profiling application: ./Reduction 536870912
+==2636== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   65.09%  1.59736s         1  1.59736s  1.59736s  1.59736s  ReductionTotalKernel(double*, double*, int)
+                   34.91%  856.75ms         1  856.75ms  856.75ms  856.75ms  NaiveTotalKernel(double*, double*, int)
+      API calls:   79.83%  2.45413s         2  1.22706s  856.75ms  1.59738s  cudaDeviceSynchronize
+                   10.34%  317.82ms         3  105.94ms  10.476us  317.75ms  cudaMallocManaged
+                    9.79%  301.03ms         3  100.34ms  80.388us  300.86ms  cudaFree
+                    0.02%  475.34us         1  475.34us  475.34us  475.34us  cuDeviceTotalMem
+                    0.01%  303.74us        96  3.1630us     838ns  100.08us  cuDeviceGetAttribute
+                    0.01%  257.44us         2  128.72us  77.035us  180.40us  cudaLaunchKernel
+                    0.00%  53.149us         1  53.149us  53.149us  53.149us  cuDeviceGetName
+                    0.00%  11.664us         1  11.664us  11.664us  11.664us  cuDeviceGetPCIBusId
+                    0.00%  4.8180us         3  1.6060us     978ns  2.7230us  cuDeviceGetCount
+                    0.00%  2.5840us         2  1.2920us     978ns  1.6060us  cuDeviceGet
+                    0.00%  1.2570us         1  1.2570us  1.2570us  1.2570us  cuDeviceGetUuid
+
+==2636== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+   27705  151.39KB  4.0000KB  0.9961MB  4.000000GB  397.8400ms  Host To Device
+   24578  170.66KB  4.0000KB  0.9961MB  4.000061GB  344.3484ms  Device To Host
+   12304         -         -         -           -   1.253395s  Gpu page fault groups
+Total CPU Page faults: 24577
+
+
+
+
+
+==2712== NVPROF is profiling process 2712, command: ./Reduction 1073741824
+==2712== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+CPU Result: 5.3688e+08
+CPU Timing [us]: 6.0963e+06
+GPUReduction Result: 5.3688e+08
+GPUNaive Result: 5.3688e+08
+Test passed
+==2712== Profiling application: ./Reduction 1073741824
+==2712== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   61.87%  6.01109s         1  6.01109s  6.01109s  6.01109s  NaiveTotalKernel(double*, double*, int)
+                   38.13%  3.70391s         1  3.70391s  3.70391s  3.70391s  ReductionTotalKernel(double*, double*, int)
+      API calls:   91.85%  9.71509s         2  4.85754s  3.70395s  6.01114s  cudaDeviceSynchronize
+                    4.98%  526.24ms         3  175.41ms  77.384us  526.08ms  cudaFree
+                    2.88%  304.47ms         3  101.49ms  20.254us  304.36ms  cudaMallocManaged
+                    0.29%  30.918ms         2  15.459ms  93.728us  30.824ms  cudaLaunchKernel
+                    0.00%  447.61us         1  447.61us  447.61us  447.61us  cuDeviceTotalMem
+                    0.00%  290.33us        96  3.0240us     838ns  94.076us  cuDeviceGetAttribute
+                    0.00%  37.924us         1  37.924us  37.924us  37.924us  cuDeviceGetName
+                    0.00%  9.9180us         1  9.9180us  9.9180us  9.9180us  cuDeviceGetPCIBusId
+                    0.00%  3.9110us         3  1.3030us     978ns  1.6760us  cuDeviceGetCount
+                    0.00%  2.5140us         2  1.2570us     908ns  1.6060us  cuDeviceGet
+                    0.00%  1.1180us         1  1.1180us  1.1180us  1.1180us  cuDeviceGetUuid
+
+==2712== Unified Memory profiling result:
+Device "GeForce GTX 1060 6GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+  106676  157.27KB  4.0000KB  0.9961MB  16.00012GB   1.615411s  Host To Device
+   41141  407.80KB  4.0000KB  2.0000MB  16.00018GB   1.366395s  Device To Host
+   49204         -         -         -           -   7.343840s  Gpu page fault groups
+Total CPU Page faults: 43648
+
+
+
+
+
+==2907== NVPROF is profiling process 2907, command: ./Reduction 2147483648
+CPU Result: 0
+CPU Timing [us]: 1
+GPUReduction Result: 0
+GPUNaive Result: 0
+Test passed
+==2907== Error: Internal profiling error 4055:34.
+======== Profiling result:
+No kernels were profiled.
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+      API calls:   99.70%  326.06ms         3  108.69ms  35.340us  305.50ms  cudaMallocManaged
+                    0.14%  446.36us         1  446.36us  446.36us  446.36us  cuDeviceTotalMem
+                    0.09%  309.47us        96  3.2230us     838ns  110.98us  cuDeviceGetAttribute
+                    0.05%  149.60us         3  49.866us  10.825us  78.711us  cudaFree
+                    0.01%  38.483us         1  38.483us  38.483us  38.483us  cuDeviceGetName
+                    0.01%  27.238us         2  13.619us  5.3770us  21.861us  cudaDeviceSynchronize
+                    0.00%  10.127us         1  10.127us  10.127us  10.127us  cuDeviceGetPCIBusId
+                    0.00%  6.2160us         2  3.1080us  1.2570us  4.9590us  cudaLaunchKernel
+                    0.00%  3.8410us         3  1.2800us     908ns  1.8160us  cuDeviceGetCount
+                    0.00%  2.3050us         2  1.1520us     838ns  1.4670us  cuDeviceGet
+                    0.00%  1.1170us         1  1.1170us  1.1170us  1.1170us  cuDeviceGetUuid
+
+======== Unified Memory profiling result:
+Total CPU Page faults: 1
+======== Error: CUDA profiling error.
+
+
+
+
+
+==2929== NVPROF is profiling process 2929, command: ./Reduction 4294967296
+CPU Result: 0
+CPU Timing [us]: 1
+GPUReduction Result: 0
+GPUNaive Result: 0
+Test passed
+==2929== Error: Internal profiling error 4055:34.
+======== Profiling result:
+No kernels were profiled.
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+      API calls:   99.68%  310.48ms         3  103.49ms  20.533us  289.97ms  cudaMallocManaged
+                    0.16%  507.61us         1  507.61us  507.61us  507.61us  cuDeviceTotalMem
+                    0.10%  315.06us        96  3.2810us     838ns  97.428us  cuDeviceGetAttribute
+                    0.03%  97.429us         3  32.476us  7.4730us  46.585us  cudaFree
+                    0.01%  40.089us         1  40.089us  40.089us  40.089us  cuDeviceGetName
+                    0.01%  16.832us         2  8.4160us  3.4220us  13.410us  cudaDeviceSynchronize
+                    0.00%  9.6380us         1  9.6380us  9.6380us  9.6380us  cuDeviceGetPCIBusId
+                    0.00%  4.0510us         2  2.0250us     978ns  3.0730us  cudaLaunchKernel
+                    0.00%  3.6330us         3  1.2110us     978ns  1.6770us  cuDeviceGetCount
+                    0.00%  2.4450us         2  1.2220us     978ns  1.4670us  cuDeviceGet
+                    0.00%  1.1170us         1  1.1170us  1.1170us  1.1170us  cuDeviceGetUuid
+
+======== Unified Memory profiling result:
+Total CPU Page faults: 1
+======== Error: CUDA profiling error.
+
+
+
+
+
