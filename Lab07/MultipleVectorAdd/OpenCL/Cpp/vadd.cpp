@@ -15,9 +15,9 @@
 
 #define __CL_ENABLE_EXCEPTIONS
 
-//#include "cl.hpp"
+#include "cl.hpp"
 
-//#include "util.hpp" // utility library
+#include "util.hpp" // utility library
 
 #include <vector>
 #include <cstdio>

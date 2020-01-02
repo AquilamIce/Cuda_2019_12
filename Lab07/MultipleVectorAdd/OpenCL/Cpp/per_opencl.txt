@@ -1,0 +1,210 @@
+Timing [us]: 783124
+vector add to find C = A+B:  1 out of 1 results were correct.
+
+
+
+
+
+Timing [us]: 778280
+vector add to find C = A+B:  2 out of 2 results were correct.
+
+
+
+
+
+Timing [us]: 776425
+vector add to find C = A+B:  4 out of 4 results were correct.
+
+
+
+
+
+Timing [us]: 746289
+vector add to find C = A+B:  8 out of 8 results were correct.
+
+
+
+
+
+Timing [us]: 722799
+vector add to find C = A+B:  16 out of 16 results were correct.
+
+
+
+
+
+Timing [us]: 779310
+vector add to find C = A+B:  32 out of 32 results were correct.
+
+
+
+
+
+Timing [us]: 770904
+vector add to find C = A+B:  64 out of 64 results were correct.
+
+
+
+
+
+Timing [us]: 775937
+vector add to find C = A+B:  128 out of 128 results were correct.
+
+
+
+
+
+Timing [us]: 772389
+vector add to find C = A+B:  256 out of 256 results were correct.
+
+
+
+
+
+Timing [us]: 774672
+vector add to find C = A+B:  512 out of 512 results were correct.
+
+
+
+
+
+Timing [us]: 768608
+vector add to find C = A+B:  1024 out of 1024 results were correct.
+
+
+
+
+
+Timing [us]: 789850
+vector add to find C = A+B:  2048 out of 2048 results were correct.
+
+
+
+
+
+Timing [us]: 784158
+vector add to find C = A+B:  4096 out of 4096 results were correct.
+
+
+
+
+
+Timing [us]: 787648
+vector add to find C = A+B:  8192 out of 8192 results were correct.
+
+
+
+
+
+Timing [us]: 772924
+vector add to find C = A+B:  16384 out of 16384 results were correct.
+
+
+
+
+
+Timing [us]: 782499
+vector add to find C = A+B:  32768 out of 32768 results were correct.
+
+
+
+
+
+Timing [us]: 763989
+vector add to find C = A+B:  65536 out of 65536 results were correct.
+
+
+
+
+
+Timing [us]: 792927
+vector add to find C = A+B:  131072 out of 131072 results were correct.
+
+
+
+
+
+Timing [us]: 796795
+vector add to find C = A+B:  262144 out of 262144 results were correct.
+
+
+
+
+
+Timing [us]: 857698
+vector add to find C = A+B:  524288 out of 524288 results were correct.
+
+
+
+
+
+Timing [us]: 923691
+vector add to find C = A+B:  1048576 out of 1048576 results were correct.
+
+
+
+
+
+Timing [us]: 1.03322e+06
+vector add to find C = A+B:  2097152 out of 2097152 results were correct.
+
+
+
+
+
+Timing [us]: 1.17869e+06
+vector add to find C = A+B:  4194304 out of 4194304 results were correct.
+
+
+
+
+
+Timing [us]: 1.49381e+06
+vector add to find C = A+B:  8388608 out of 8388608 results were correct.
+
+
+
+
+
+Timing [us]: 2.28191e+06
+vector add to find C = A+B:  16777216 out of 16777216 results were correct.
+
+
+
+
+
+Timing [us]: 3.75999e+06
+vector add to find C = A+B:  33554432 out of 33554432 results were correct.
+
+
+
+
+
+Timing [us]: 6.23736e+06
+vector add to find C = A+B:  67108864 out of 67108864 results were correct.
+
+
+
+
+
+Timing [us]: 1.10945e+07
+vector add to find C = A+B:  134217728 out of 134217728 results were correct.
+
+
+
+
+
+Exception
+ERROR: clEnqueueNDRangeKernel(CL_MEM_OBJECT_ALLOCATION_FAILURE)
+
+
+
+
+
+Exception
+ERROR: clEnqueueMapBuffer(CL_MEM_OBJECT_ALLOCATION_FAILURE)
+
+
+
+
+
