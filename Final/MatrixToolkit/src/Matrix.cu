@@ -1,10 +1,10 @@
-//TODO: operator=
-
 #include <stdio.h>
 #include "Matrix.h"
 #include <stdlib.h>
 #include <iostream>
-#include <cuda_runtime.h>
+#include <cmath>
+
+
 
 Matrix::Matrix(int width, int height)
 {
@@ -19,6 +19,19 @@ Matrix::~Matrix()
 	cudaFree(_elements);
 }
 
+/*
+Matrix::Matrix(const Matrix &matrix)
+{
+	_width = matrix._width;
+	_height = matrix._height;
+	cudaMallocManaged(&_elements, _width * _height * sizeof(float));
+		for(int i = 0; i < matrix._width * matrix._height; i++)
+		{
+			_elements[i] = matrix._elements[i];
+		}
+}
+*/
+
 void Matrix::Initialize(float num, bool randomize)
 {
 	if(randomize)
@@ -32,6 +45,15 @@ void Matrix::Initialize(float num, bool randomize)
 			_elements[i] = num;
 		}
 	} 
+}
+
+void Matrix::Initialize(const float* num)
+{
+		for(int i = 0; i < _width * _height; i++)
+		{
+			_elements[i] = num[i];
+		}
+
 }
 
 void Matrix::Print()
@@ -61,8 +83,10 @@ void Matrix::MatrixCompare(Matrix &A, Matrix &B)
 	std::cout<<"Check ok"<<std::endl;
 }
 
+
 Matrix Matrix::operator+(const Matrix &matrix)
 {
+
 	if (matrix._width != _width || matrix._height != _height)
 	{
 		fprintf(stderr, "Wrong matrix size");

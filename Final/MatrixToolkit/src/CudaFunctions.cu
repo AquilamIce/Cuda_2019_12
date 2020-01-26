@@ -7,7 +7,7 @@
 
 #include "Matrix.h"
 
-__global__ void MatrixAdd(const Matrix &A, const Matrix &B, Matrix &C)
+__global__ void MatrixAdd(const Matrix A, const Matrix B, Matrix C)
 {
     int i = blockDim.x * blockIdx.x + threadIdx.x;
 
@@ -17,7 +17,7 @@ __global__ void MatrixAdd(const Matrix &A, const Matrix &B, Matrix &C)
     }
 }
 
-__global__ void MatrixSubtract(const Matrix &A, const Matrix &B, Matrix &C)
+__global__ void MatrixSubtract(const Matrix A, const Matrix B, Matrix C)
 {
     int i = blockDim.x * blockIdx.x + threadIdx.x;
 
