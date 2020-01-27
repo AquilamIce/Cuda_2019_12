@@ -1,9 +1,8 @@
-#include <stdio.h>
 #include "Matrix.h"
 #include <stdlib.h>
 #include <iostream>
-#include <cmath>
-
+#include <cuda_runtime.h>
+#include <stdio.h>
 
 
 Matrix::Matrix(int width, int height)
@@ -14,46 +13,39 @@ Matrix::Matrix(int width, int height)
 	cudaMallocManaged(&_elements, width * height * sizeof(float));
 }
 
-Matrix::~Matrix()
-{
-	cudaFree(_elements);
-}
-
-/*
 Matrix::Matrix(const Matrix &matrix)
 {
 	_width = matrix._width;
 	_height = matrix._height;
 	cudaMallocManaged(&_elements, _width * _height * sizeof(float));
-		for(int i = 0; i < matrix._width * matrix._height; i++)
-		{
-			_elements[i] = matrix._elements[i];
-		}
+
+	for(int i = 0; i < matrix._width * matrix._height; i++)
+	{
+		_elements[i] = matrix._elements[i];
+	}
 }
-*/
+
+Matrix::~Matrix()
+{
+	cudaFree(_elements);
+}
 
 void Matrix::Initialize(float num, bool randomize)
 {
 	if(randomize)
 	{
-
+		for(int i = 0; i < _width * _height; i++)
+		{
+			_elements[i] = rand()/(float)RAND_MAX;;
+		}
 	}
-	else 
+	else
 	{
 		for(int i = 0; i < _width * _height; i++)
 		{
 			_elements[i] = num;
 		}
-	} 
-}
-
-void Matrix::Initialize(const float* num)
-{
-		for(int i = 0; i < _width * _height; i++)
-		{
-			_elements[i] = num[i];
-		}
-
+	}
 }
 
 void Matrix::Print()
@@ -76,7 +68,6 @@ void Matrix::MatrixCompare(Matrix &A, Matrix &B)
 			if(fabs(A._elements[(row*A._width) + col] - B._elements[(row*B._width) + col]) > 1e-4)
 			{
 				fprintf(stderr, "Result verification failed at element M[%d;%d]!\t%f|%f\n", row+1, col+1, A._elements[(row*A._width) + col], B._elements[(row*B._width) + col]);
-				exit(EXIT_FAILURE);
 			}
 		}
 	}
@@ -86,7 +77,6 @@ void Matrix::MatrixCompare(Matrix &A, Matrix &B)
 
 Matrix Matrix::operator+(const Matrix &matrix)
 {
-
 	if (matrix._width != _width || matrix._height != _height)
 	{
 		fprintf(stderr, "Wrong matrix size");
@@ -143,6 +133,43 @@ Matrix Matrix::operator*(const Matrix &matrix)
 	return result;
 }
 
+const Matrix& Matrix::operator=(const Matrix &A)
+{
+  if (&A == this)
+    return *this;
+  cudaFree(_elements);
+  _width = A._width;
+  _height = A._height;
+
+  cudaMallocManaged(&_elements, _width * _height * sizeof(float));
+
+  for(int i = 0; i < A._width * A._height; ++i)
+  {
+	  this->_elements[i] = A._elements[i];
+  }
+
+  return *this;
+}
+
+Matrix Matrix::Transpose()
+{
+	Matrix result = Matrix(_height, _width);
+	for (int row = 0; row < result._height; row++)
+		for (int col = 0; col < result._width; col++)
+			result._elements[row*result._width + col] = _elements[col*_width + row];
+	return result;
+}
+
+float Matrix::VectorSum()
+{
+	float result = 0;
+
+	for(int i = 0; i < _width * _height; i++)
+	{
+		result += _elements[i];
+	}
+	return result;
+}
 
 float& Matrix::operator[](int i)
 {
@@ -153,4 +180,3 @@ const float& Matrix::operator[](int i) const
 {
 	return _elements[i];
 }
-
