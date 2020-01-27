@@ -1,12 +1,12 @@
-#include "CudaFunctions.h"
-
+#include "CudaFunctions.h" // Header file
 #include <stdlib.h>
 #include <stdio.h>
-
 #include <cuda_runtime.h>
+#include "Matrix.h" // Header file of Matrix class
 
-#include "Matrix.h"
 
+//Matrix addition kernel
+//Pointers to array of elements of Matrix A, Matrix B and Matrix C. Values of Matrix A size.
 __global__ void MatrixAdd(const float *A_elements, const float *B_elements,  float *C_elements, const int A_width, const int A_height)
 {
 
@@ -15,10 +15,13 @@ __global__ void MatrixAdd(const float *A_elements, const float *B_elements,  flo
 
 	if (row < A_height && col < A_width)
 	{
+	 	//Modifying array of elements of Matrix C
 		C_elements[row * A_width + col] = A_elements[row * A_width + col] + B_elements[row * A_width + col];
 	}
 }
 
+//Matrix substraction kernel
+//Pointers to array of elements of Matrix A, Matrix B and Matrix C. Values of Matrix A size.
 __global__ void MatrixSubtract(const float* A_elements, const float* B_elements,  float* C_elements, const int A_width, const int A_height)
 {
 	int row = blockIdx.y * blockDim.y + threadIdx.y;
@@ -26,10 +29,14 @@ __global__ void MatrixSubtract(const float* A_elements, const float* B_elements,
 
 	if (row < A_height && col < A_width)
 	{
+	 	//Modifying array of elements of Matrix C
 		C_elements[row * A_width + col] = A_elements[row * A_width + col] - B_elements[row * A_width + col];
 	}
 }
 
+//Matrix multiplication kernel
+//Pointers to array ofelements of Matrix A, Matrix B and Matrix C.
+//Values of Matrix A, Matrix B and Matrix C size.
 __global__ void MatrixMultiply(const float* A_elements, const float* B_elements,  float* C_elements, const int A_width, const int A_height, const int B_width, const int B_height, int C_width,  int C_height)
 {
 	 int Row = blockIdx.y * blockDim.y + threadIdx.y;
@@ -67,12 +74,14 @@ __global__ void MatrixMultiply(const float* A_elements, const float* B_elements,
         __syncthreads();
     }
 
-    if (Row < C_height && Col < C_width)//Saving Final result into Matrix C
+    if (Row < C_height && Col < C_width) //Saving Final result into Matrix C
     {
         C_elements[Row*C_width + Col] = Cvalue;
     }
 }
 
+//Matrix transposition kernel
+//Pointers to array of elements of Matrix A and Matrix B. Values of Matrix A height and Matrix B width.
 __global__ void MatrixTranspose(const float *A_elements, float *B_elements, const int A_width, const int A_height, const int B_width)
 {
 	int row = blockIdx.y * blockDim.y + threadIdx.y;
@@ -84,6 +93,8 @@ __global__ void MatrixTranspose(const float *A_elements, float *B_elements, cons
 	}
 }
 
+//Matrix elements summation kernel
+//Forwarded Matrix input and recived pointer to output value.
 __global__ void VectorSum(Matrix input, double *output)
 {
 	__shared__ double partialSum[2*BLOCK_SIZE];

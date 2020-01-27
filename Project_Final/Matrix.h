@@ -30,7 +30,9 @@ public:
 	float& operator[](int i);
 	const float& operator[](int i) const;
 
+	//Transposition of matrix
 	Matrix Transpose();
+	//Summation elements of matrix
 	float VectorSum();
 	//Compare two matrices
 	static void MatrixCompare(Matrix &A, Matrix &B);

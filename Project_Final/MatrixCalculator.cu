@@ -1,11 +1,8 @@
 #include "MatrixCalculator.h"
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctime>
-
 #include <cuda_runtime.h>
-
 #include "Matrix.h"
 #include "CudaFunctions.h"
 

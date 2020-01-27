@@ -5,14 +5,19 @@
 #include <stdio.h>
 
 
+
+//Matrix constructor
 Matrix::Matrix(int width, int height)
 {
+	//Hide variables
 	_width = width;
 	_height = height;
 
+	//Cuda mamory menagemet system
 	cudaMallocManaged(&_elements, width * height * sizeof(float));
 }
 
+//Matrix copy constructor
 Matrix::Matrix(const Matrix &matrix)
 {
 	_width = matrix._width;
@@ -25,20 +30,24 @@ Matrix::Matrix(const Matrix &matrix)
 	}
 }
 
+//Matrix deconstructor
 Matrix::~Matrix()
 {
 	cudaFree(_elements);
 }
 
+//Matrix initialization method
 void Matrix::Initialize(float num, bool randomize)
 {
+	//Fill matrix with random numbers
 	if(randomize)
 	{
 		for(int i = 0; i < _width * _height; i++)
 		{
-			_elements[i] = rand()/(float)RAND_MAX;;
+			_elements[i] = rand()/(float)RAND_MAX;; //Random number x:(0,1)
 		}
 	}
+	//Fill matrix with one number
 	else
 	{
 		for(int i = 0; i < _width * _height; i++)
@@ -48,6 +57,7 @@ void Matrix::Initialize(float num, bool randomize)
 	}
 }
 
+//Matrix print method
 void Matrix::Print()
 {
 	for(int row = 0; row < _height; row ++)
@@ -60,6 +70,7 @@ void Matrix::Print()
 	}
 }
 
+//Matrix compare method
 void Matrix::MatrixCompare(Matrix &A, Matrix &B)
 {
 	for(int row = 0; row < A._height; row++)
@@ -74,7 +85,7 @@ void Matrix::MatrixCompare(Matrix &A, Matrix &B)
 	std::cout<<"Check ok"<<std::endl;
 }
 
-
+//Matrix + operator overload
 Matrix Matrix::operator+(const Matrix &matrix)
 {
 	if (matrix._width != _width || matrix._height != _height)
@@ -93,6 +104,7 @@ Matrix Matrix::operator+(const Matrix &matrix)
 	return result;
 }
 
+//Matix - operator overload
 Matrix Matrix::operator-(const Matrix &matrix)
 {
 	if (matrix._width != _width || matrix._height != _height)
@@ -111,6 +123,7 @@ Matrix Matrix::operator-(const Matrix &matrix)
 	return result;
 }
 
+//Matrix * operator overload
 Matrix Matrix::operator*(const Matrix &matrix)
 {
 	if (_width != matrix._height)
@@ -133,6 +146,7 @@ Matrix Matrix::operator*(const Matrix &matrix)
 	return result;
 }
 
+//Matrix = operator overload
 const Matrix& Matrix::operator=(const Matrix &A)
 {
   if (&A == this)
@@ -151,6 +165,7 @@ const Matrix& Matrix::operator=(const Matrix &A)
   return *this;
 }
 
+//Matrix transpose method
 Matrix Matrix::Transpose()
 {
 	Matrix result = Matrix(_height, _width);
@@ -160,6 +175,7 @@ Matrix Matrix::Transpose()
 	return result;
 }
 
+//Matrix elements summation method
 float Matrix::VectorSum()
 {
 	float result = 0;
@@ -171,6 +187,7 @@ float Matrix::VectorSum()
 	return result;
 }
 
+//Matrix [] operator overload
 float& Matrix::operator[](int i)
 {
 	return _elements[i];
