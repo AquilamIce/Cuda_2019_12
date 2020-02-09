@@ -1,5 +1,5 @@
-//FIRST VERSION OF PROJECT !
-//IGNORE IT
+FIRST VERSION OF PROJECT !
+IGNORE IT
 
 We decided to realize our CUDA project as Matrix Toolkit. Application allows you to
 addition, substraction, multiplication, transpose
