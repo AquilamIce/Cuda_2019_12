@@ -22,6 +22,7 @@ Most of all you have to have platform with CUDA device.
   4. Use make command. If it does not work make sure that you have installed that utillity.
   5. Run your Final_v2 binary file and try the possibilities of the program.
 
+On the other way you can load all files to nsight editor and build and run project there.
 
 ## Authors
 Michał Żoczek
