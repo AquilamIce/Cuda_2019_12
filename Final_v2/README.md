@@ -17,7 +17,7 @@ Header files contain comments that serve as documentation of project. There are 
 Most of all you have to have platform with CUDA device.
 
   1. Nextly download all files that Final_v2 folder contains.
-  2. On Linux/Debian terminal go to Debug directory.
+  2. In Linux/Debian terminal go to Debug directory.
   3. Make sure that there are not any  .o and .d files.
   4. Use make command. If it does not work make sure that you have installed that utillity.
   5. Run your Final_v2 binary file and try the possibilities of the program.
