@@ -1,3 +1,11 @@
+//------------------------------------------------------------------------
+/*
+Authors:
+Michał Żoczek
+Paweł Lipiór
+*/
+//-----------------------------------------------------------------------
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits>
@@ -7,13 +15,13 @@
 #include "CudaFunctions.h"
 #include "MatrixCalculator.h"
 
-#define BLOCK_SIZE 16 //256 threads per block
 
 int main(int argc, char **argv)
 {
-	MatrixCalculator Calculator; //Create Calculator object of class MatrixCalculator
+	MatrixCalculator Calculator; //Matrix Calculator manages all operations on matrices
 
 	std::cout<<"DEMO OF COMPUTING PROGRAM"<<std::endl;
+
 
 	//Simple interface to set all parameters and manage program
 	char operation = '1';
@@ -33,12 +41,12 @@ int main(int argc, char **argv)
 	        std::cin.clear();
 	        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	    }
-		
-		//Get information form user
+
+		//Get information from user
 		std::cin>>operation;
 		std::cout<<std::endl;
-		
-		//Case statement to menu management 
+
+		//Case statement to menu management
 		switch(operation)
 		{
 		case '0':
