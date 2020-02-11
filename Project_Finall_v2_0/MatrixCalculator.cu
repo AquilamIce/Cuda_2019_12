@@ -284,8 +284,12 @@ void MatrixCalculator::VectorSummation()
 	std::cout<<std::endl;
 
 	//Create input matrices filled with random values
-	Matrix A = CreateRandomMatrix(width, 1);
+	Matrix A(width, 1);
+	
+	cudaMemPrefetchAsync(A._elements, A._width * A._height * sizeof(float), cudaCpuDeviceId);
 
+	A.Initialize();
+	
 	//Create matrices for results
 	double C_CPU = 0;
 
@@ -296,6 +300,7 @@ void MatrixCalculator::VectorSummation()
 	dim3 dimBlock(BLOCK_SIZE);
 	//Each block takes 2 * BLOCK_SIZE elements
 	dim3 dimGrid(((unsigned)width + 2 * BLOCK_SIZE - 2)/(2 * BLOCK_SIZE));
+    	
 
 	//Compute operation on CPU
 	std::cout<<std::endl;
@@ -304,6 +309,8 @@ void MatrixCalculator::VectorSummation()
 	std::cout<<"CPU computing time [s]: "<< (clock() - start)/(1.0*CLOCKS_PER_SEC)<<std::endl;
 	std::cout<<std::endl;
 	std::cout<<std::endl;
+	
+	cudaMemPrefetchAsync(A._elements, A._width * A._height * sizeof(float), deviceId);
 
 	//Compute on GPU
 	start = clock();
